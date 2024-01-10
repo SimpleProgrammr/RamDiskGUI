@@ -34,12 +34,10 @@ namespace RamDiskGUI
         {
             label1 = new Label();
             diskSpaceNumeric = new NumericUpDown();
-            DiskNameTextBox = new TextBox();
             diskLetterComboBox = new ComboBox();
             mountButton = new Button();
             label4 = new Label();
             label3 = new Label();
-            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)diskSpaceNumeric).BeginInit();
             SuspendLayout();
             // 
@@ -57,7 +55,7 @@ namespace RamDiskGUI
             // diskSpaceNumeric
             // 
             diskSpaceNumeric.Font = new Font("Segoe UI", 10F);
-            diskSpaceNumeric.Location = new Point(95, 163);
+            diskSpaceNumeric.Location = new Point(95, 104);
             diskSpaceNumeric.Maximum = new decimal(new int[] { 4096, 0, 0, 0 });
             diskSpaceNumeric.Minimum = new decimal(new int[] { 10, 0, 0, 0 });
             diskSpaceNumeric.Name = "diskSpaceNumeric";
@@ -65,21 +63,11 @@ namespace RamDiskGUI
             diskSpaceNumeric.TabIndex = 1;
             diskSpaceNumeric.Value = new decimal(new int[] { 10, 0, 0, 0 });
             // 
-            // DiskNameTextBox
-            // 
-            DiskNameTextBox.Font = new Font("Segoe UI", 10F);
-            DiskNameTextBox.Location = new Point(95, 54);
-            DiskNameTextBox.Name = "DiskNameTextBox";
-            DiskNameTextBox.PlaceholderText = "RamDrive";
-            DiskNameTextBox.Size = new Size(122, 25);
-            DiskNameTextBox.TabIndex = 4;
-            DiskNameTextBox.TextAlign = HorizontalAlignment.Center;
-            // 
             // diskLetterComboBox
             // 
             diskLetterComboBox.Font = new Font("Segoe UI", 10F);
             diskLetterComboBox.FormattingEnabled = true;
-            diskLetterComboBox.Location = new Point(96, 107);
+            diskLetterComboBox.Location = new Point(96, 48);
             diskLetterComboBox.Name = "diskLetterComboBox";
             diskLetterComboBox.Size = new Size(121, 25);
             diskLetterComboBox.TabIndex = 5;
@@ -87,7 +75,7 @@ namespace RamDiskGUI
             // mountButton
             // 
             mountButton.Font = new Font("Segoe UI", 15F);
-            mountButton.Location = new Point(36, 194);
+            mountButton.Location = new Point(36, 135);
             mountButton.Name = "mountButton";
             mountButton.Size = new Size(152, 58);
             mountButton.TabIndex = 6;
@@ -99,7 +87,7 @@ namespace RamDiskGUI
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 10F);
-            label4.Location = new Point(12, 165);
+            label4.Location = new Point(12, 106);
             label4.Name = "label4";
             label4.Size = new Size(77, 19);
             label4.TabIndex = 9;
@@ -109,33 +97,21 @@ namespace RamDiskGUI
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10F);
-            label3.Location = new Point(12, 110);
+            label3.Location = new Point(12, 51);
             label3.Name = "label3";
             label3.Size = new Size(78, 19);
             label3.TabIndex = 8;
             label3.Text = "Disk Letter:";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10F);
-            label2.Location = new Point(12, 60);
-            label2.Name = "label2";
-            label2.Size = new Size(74, 19);
-            label2.TabIndex = 11;
-            label2.Text = "Disk Label:";
-            // 
             // mainWindow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(228, 263);
-            Controls.Add(label2);
+            ClientSize = new Size(228, 201);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(mountButton);
             Controls.Add(diskLetterComboBox);
-            Controls.Add(DiskNameTextBox);
             Controls.Add(diskSpaceNumeric);
             Controls.Add(label1);
             Name = "mainWindow";
@@ -151,11 +127,9 @@ namespace RamDiskGUI
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown diskSpaceNumeric;
-        private System.Windows.Forms.TextBox DiskNameTextBox;
         private System.Windows.Forms.ComboBox diskLetterComboBox;
         private System.Windows.Forms.Button mountButton;
         private Label label4;
         private Label label3;
-        private Label label2;
     }
 }

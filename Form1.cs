@@ -34,13 +34,11 @@ namespace RamDiskGUI
         {
             int space = (int)diskSpaceNumeric.Value;
             char letter = (char)diskLetterComboBox.SelectedItem.ToString()[0];
-            string name = DiskNameTextBox.Text;
-            name = name == string.Empty ? "RamDrive" : name;
+            string name = "RamDrive";
             if (mountButton.Text == "Mount")
             {
                 diskLetterComboBox.Enabled = false;
                 diskSpaceNumeric.Enabled = false;
-                DiskNameTextBox.Enabled = false;
                 
                 RamDrive.Mount(space, FileSystem.NTFS, letter, name);
                  
@@ -52,7 +50,6 @@ namespace RamDiskGUI
                 mountButton.Text = "Mount";
                 diskLetterComboBox.Enabled = true;
                 diskSpaceNumeric.Enabled = true;
-                DiskNameTextBox.Enabled = true;
 
             }
             
