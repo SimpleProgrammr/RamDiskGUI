@@ -91,6 +91,7 @@ namespace RamDiskGUI
                     psi.CreateNoWindow = true;
                     psi.RedirectStandardOutput = true;
                     psi.RedirectStandardInput = true;
+
                     var formatProcess = Process.Start(psi);
                     var swStandardInput = formatProcess.StandardInput;
                     swStandardInput.WriteLine();
@@ -108,6 +109,7 @@ namespace RamDiskGUI
                 diskSpaceNumeric.Enabled = false;
                 diskNameTextBox.Enabled = false;
                 fileSystemComboBox.Enabled = false;
+                clusterSizeComboBox.Enabled = false;
             }
             else
             {
@@ -117,6 +119,7 @@ namespace RamDiskGUI
                 diskSpaceNumeric.Enabled = true;
                 diskNameTextBox.Enabled = true;
                 fileSystemComboBox.Enabled = true;
+                clusterSizeComboBox.Enabled = true;
 
             }
 
