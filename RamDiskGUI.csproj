@@ -6,8 +6,8 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="RamDisk" Version="1.0.5" />
   </ItemGroup>
